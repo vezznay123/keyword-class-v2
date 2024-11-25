@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --ubuntu-orange: #E95420;
+  --ubuntu-purple: #772953;
+  --ubuntu-warm-grey: #AEA79F;
+  --ubuntu-cool-grey: #333333;
+  --ubuntu-light-grey: #F7F7F7;
+}
+
+body {
+  font-family: 'Ubuntu', sans-serif;
+  background: linear-gradient(135deg, var(--ubuntu-purple) 0%, #2C001E 100%);
+  min-height: 100vh;
+  color: var(--ubuntu-light-grey);
+}
+
+.glass {
+  background: rgba(51, 51, 51, 0.25);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.ubuntu-button {
+  @apply rounded-md px-6 py-2.5 font-medium transition-all duration-200;
+  background: linear-gradient(to bottom, #E95420 0%, #C4441C 100%);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+.ubuntu-button:hover {
+  background: linear-gradient(to bottom, #F42 0%, #D4542C 100%);
+}
+
+.ubuntu-button:active {
+  background: linear-gradient(to bottom, #C4441C 0%, #E95420 100%);
+}
+
+.ubuntu-button-secondary {
+  @apply rounded-md px-6 py-2.5 font-medium transition-all duration-200;
+  background: linear-gradient(to bottom, #772953 0%, #661942 100%);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+.ubuntu-button-secondary:hover {
+  background: linear-gradient(to bottom, #883964 0%, #772953 100%);
+}
+
+.ubuntu-input {
+  @apply w-full px-4 py-2.5 rounded-md bg-black/20 border border-white/10 focus:border-[#E95420] outline-none;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+}
